@@ -127,8 +127,7 @@ The qnap8528 project is a kernel module for exposing the ITE8528 embedded contro
 
 Sounds amazing right? below are instruction to install and use this module for yourself! If you install this module, please be kind and run a few tests to verify that all the features are working properly and report back either by creating a new issue or emailing me at `qnap8528 [AT] giddi.net`.
 
-**Note**: QM2/expansion card are not supported currently (it seems that most of them are not controlled by the EC anyway), \
-Waiting on hardware for testing, contributions and research comments are welcome (issue: https://github.com/0xGiddi/qnap8528/issues/6)
+**Note**: QM2/expansion card are not supported by this module, check out [qnap-qm2](https://github.com/0xGiddi/qnap-qm2) module.
 
 ## Installation Instructions
 Before installing, please check the *Supported Models* table and see that your device is supported by this module, if your device is not yet supported, please check seethe Q&A for more information. The following instructions have been tested on *Debian 12 x64*.
@@ -407,7 +406,7 @@ the driver may still work fine detecting it as the base model without the extra 
 |TS-3088XU|Q06X0|Q06Y0|30/30 |
 |TS-973AX|Q0711|Q0760|9/9 |
 |TS-873A|Q07D0|Q07L0|10/10 |✅ Tested, Thank you @calypso
-|TS-673A|Q07D0|Q07M0|8/8 |🟩 Similar to TS-473A
+|TS-673A|Q07D0|Q07M0|8/8 |✅ Tested, Thank you @IT-Ralph
 |TS-473A|Q07D0|Q07N0|6/6 |  ✅ Tested, by me. 
 |TS-1655|Q07Z1|Q08G0|18/18 |
 |TS-2287XU|Q0840|Q08A0|22/22 |
@@ -523,6 +522,9 @@ TS-1264U|Q08R0|Q08X0|12/12 | ⚠️ See *2
 |TS-1886XU|Q0470|Q04L0|18/18 |
 |TS-1886XU R2|Q0B50|Q0950|18/18 |
 |TES-3085U|QX541|QY510|6/30 | ⚠️ See *1
+|BA-800|B6493|Q0AA0|10/10 |
+|BA-400|Q0BB1|Q0BL0|6/6 |
+|BA-600|B6493|Q0BK0|8/8 |
 
 *1 Some or all disks LEDs are managed by other hardware (not the EC), if the model is missing 2 disks (e.g `8/10`), it's most likely the internal M.2/NVME ports that do not have an LED associated with them.\
 *2 Some or all of the disks do not have a present or error (green/red) LED.\
